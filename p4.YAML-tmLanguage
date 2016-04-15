@@ -20,7 +20,7 @@ comment: |-
     if/ifdef/endif
     And much more.....
 
----
+
 name: p4
 scopeName: source.p4
 fileTypes: [p4]
