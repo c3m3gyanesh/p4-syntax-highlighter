@@ -196,7 +196,7 @@ repository:
           |truncate|drop|no_op
           |push|pop
           |count
-          |excute_meter
+          |execute_meter
           |generate_digest
           |resubmit|recirculate
           |clone_ingress_pkt_to_ingress
