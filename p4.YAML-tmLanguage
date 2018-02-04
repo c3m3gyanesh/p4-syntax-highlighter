@@ -188,17 +188,25 @@ repository:
       match: |-
         (?x)
         \b(add_header|copy_header|remove_header
-          |modify_field|add_to_field
+          |modify_field|add_to_field|subtract_from_field
+          |add|subtract
           |set_field_to_hash_index
           |modify_field_with_hash_based_offset
-          |truncate|drop
+          |modify_field_rng_uniform
+          |truncate|drop|no_op
+          |push|pop
           |count
+          |execute_meter
           |generate_digest
           |resubmit|recirculate
           |clone_ingress_pkt_to_ingress
           |clone_egress_pkt_to_ingress
           |clone_ingress_pkt_to_egress
-          |clone_egress_pkt_to_egress)
+          |clone_egress_pkt_to_egress
+          |bit_and|bit_or|bit_xor
+          |shift_right|shift_left
+          |register_read
+          |register_write)
         \b
 
   p4-conditional:
