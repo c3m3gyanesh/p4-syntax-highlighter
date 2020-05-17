@@ -41,7 +41,7 @@ repository:
     patterns:
     - name: comment.block.p4
       begin: \s*(/\*)
-      end: (\*/)(\n?)
+      end: (\*/)
     - name: comment.line.double.slash.p4
       begin: \s*(//)
       end: (?<=$\n)(?<!\\$\n)

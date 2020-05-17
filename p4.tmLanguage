@@ -300,7 +300,7 @@ Todo:
 					<key>begin</key>
 					<string>\s*(/\*)</string>
 					<key>end</key>
-					<string>(\*/)(\n?)</string>
+					<string>\s*(\*/)</string>
 					<key>name</key>
 					<string>comment.block.p4</string>
 				</dict>
