@@ -274,6 +274,10 @@ Todo:
 					<key>include</key>
 					<string>#p4-stateful</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#p4-p416-keyword</string>
+				</dict>
 			</array>
 		</dict>
 		<key>p4-builtin</key>
@@ -450,6 +454,18 @@ Todo:
 				<dict>
 					<key>include</key>
 					<string>#lex-newline</string>
+				</dict>
+			</array>
+		</dict>
+		<key>p4-p416-keyword</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(struct|const|in|out|inout|state|transition)\b</string>
+					<key>name</key>
+					<string>keyword.p416.p4</string>
 				</dict>
 			</array>
 		</dict>
