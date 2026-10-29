@@ -274,6 +274,10 @@ Todo:
 					<key>include</key>
 					<string>#p4-stateful</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#p4-p416-keyword</string>
+				</dict>
 			</array>
 		</dict>
 		<key>p4-builtin</key>
@@ -453,6 +457,18 @@ Todo:
 				</dict>
 			</array>
 		</dict>
+		<key>p4-p416-keyword</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(struct|const|in|out|inout|state|transition)\b</string>
+					<key>name</key>
+					<string>keyword.p416.p4</string>
+				</dict>
+			</array>
+		</dict>
 		<key>p4-preprocessors</key>
 		<dict>
 			<key>patterns</key>
@@ -524,6 +540,29 @@ Todo:
 				</dict>
 			</array>
 		</dict>
+		<key>p4-strings</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>end</key>
+					<string>"</string>
+					<key>name</key>
+					<string>string.quoted.double.p4</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\\.</string>
+							<key>name</key>
+							<string>constant.character.escape.p4</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
 		<key>p4-todo</key>
 		<dict>
 			<key>patterns</key>
@@ -547,6 +586,10 @@ Todo:
 				<dict>
 					<key>include</key>
 					<string>#p4-preprocessors</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#p4-strings</string>
 				</dict>
 				<dict>
 					<key>include</key>

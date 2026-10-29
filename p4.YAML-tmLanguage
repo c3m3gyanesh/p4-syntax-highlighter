@@ -34,6 +34,7 @@ repository:
     patterns:
     - include: '#p4-comments'
     - include: '#p4-preprocessors'
+    - include: '#p4-strings'
     - include: '#p4-abstractions'
     - include: '#p4-literal-number'
 
@@ -45,6 +46,15 @@ repository:
     - name: comment.line.double.slash.p4
       begin: \s*(//)
       end: (?<=$\n)(?<!\\$\n)
+
+  p4-strings:
+    patterns:
+    - name: string.quoted.double.p4
+      begin: '"'
+      end: '"'
+      patterns:
+      - name: constant.character.escape.p4
+        match: \\.
 
   p4-preprocessors:
     patterns:
@@ -125,6 +135,7 @@ repository:
     - include: '#p4-statement'
     - include: '#p4-constants'
     - include: '#p4-stateful'
+    - include: '#p4-p416-keyword'
 
   p4-object-keyword:
     patterns:
@@ -137,6 +148,11 @@ repository:
           |control
           |parser_value_set)
         \b
+
+  p4-p416-keyword:
+    patterns:
+    - name: keyword.p416.p4
+      match: \b(struct|const|in|out|inout|state|transition)\b
 
   p4-object-attribute-keyword:
     patterns:
