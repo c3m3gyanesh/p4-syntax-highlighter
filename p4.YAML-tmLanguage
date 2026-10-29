@@ -34,6 +34,7 @@ repository:
     patterns:
     - include: '#p4-comments'
     - include: '#p4-preprocessors'
+    - include: '#p4-strings'
     - include: '#p4-abstractions'
     - include: '#p4-literal-number'
 
@@ -45,6 +46,15 @@ repository:
     - name: comment.line.double.slash.p4
       begin: \s*(//)
       end: (?<=$\n)(?<!\\$\n)
+
+  p4-strings:
+    patterns:
+    - name: string.quoted.double.p4
+      begin: '"'
+      end: '"'
+      patterns:
+      - name: constant.character.escape.p4
+        match: \\.
 
   p4-preprocessors:
     patterns:
